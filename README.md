@@ -18,15 +18,31 @@ Natural language processing (NLP) is a subfield of artificial intelligence that 
 
 ### Literature Review
 
-Previous research has shown that NLP can be an effective tool for detecting toxic language in online comments. Mesgar and Strube (2016) proposed a lexical coherence graph modeling technique using word embeddings, which they used to detect coherence violations in online comments. Oikawa, Nakayama, and Murakami (2022) proposed a stacking-based efficient method for toxic language detection on live streaming chat. Rossi et al. (2020) proposed a temporal graph network approach for deep learning on dynamic graphs, which they used to predict temporal patterns in online social networks.
+Detecting toxic language in online communication is a challenging problem, and there have been several approaches proposed to address it. In this section, we will review some of the related work on this topic.
+
+**Convolutional Neural Networks**
+
+Convolutional neural networks (CNNs) have been widely used for text classification tasks, including toxic language detection. In a study by Zhang et al. (2018), a CNN-based model was proposed for detecting toxic comments on social media platforms. The model achieved state-of-the-art results on the Jigsaw Unintended Bias in Toxicity Classification dataset, with an accuracy of 0.946. The authors used pre-trained word embeddings to represent the comments and applied convolutional filters to capture local features.
+
+**Recurrent Neural Networks**
+
+Recurrent neural networks (RNNs) have also been used for toxic language detection. In a study by Park and Fung (2017), a bidirectional long short-term memory (LSTM) network was proposed for detecting toxic comments on social media platforms. The model achieved an accuracy of 0.937 on the Jigsaw Unintended Bias in Toxicity Classification dataset. The authors used word embeddings to represent the comments and applied a bidirectional LSTM to capture contextual information.
+
+**Graph-based Methods**
+
+Graph-based methods have also been proposed for modeling the structure of text and detecting toxic language. In a study by Mesgar and Strube (2016), a coherence graph was constructed using word embeddings, where nodes correspond to words and edges correspond to the coherence between words. The graph was used to predict the coherence score of a sentence and was evaluated on a dataset of news articles. In a more recent study by Rossi et al. (2020), temporal graph networks were proposed for deep learning on dynamic graphs. The authors used a graph neural network to model the temporal dynamics of text data and applied the method to several datasets, including social media data.
+
+**Ensemble Methods**
+
+Ensemble methods have also been proposed for toxic language detection. In a study by Oikawa et al. (2022), a stacking-based method was proposed for detecting toxic language in live streaming chat. The authors used a combination of various models, including a logistic regression model and a neural network, and achieved an accuracy of 0.932 on a dataset of Japanese live streaming chat.
 
 ### Anticipated NLP Methods
 
-In this project, we will use a combination of the lexical coherence graph modeling technique proposed by Mesgar and Strube (2016) and the stacking-based efficient method proposed by Oikawa, Nakayama, and Murakami (2022) to develop our NLP model. We will use the Jigsaw Unintended Bias in Toxicity Classification dataset, which contains a large number of comments labeled as toxic or non-toxic, to train and evaluate our model. We will also use word embeddings to represent the meaning of words in the comments and to create the coherence graph.
+Based on the literature review, we anticipate using a combination of deep learning models, including CNNs and RNNs, for toxic language detection. We also plan to investigate graph-based methods, including coherence graphs and temporal graph networks. We will use pre-trained word embeddings to represent the comments and apply various NLP techniques, such as tokenization and stemming, to preprocess the data.
 
 ### Expected Results
 
-We expect to achieve high accuracy in detecting toxic language in online comments using our NLP model. This will be useful for content moderators and online community managers, who can use the model to automatically flag toxic comments for removal. We also expect that our model will be able to detect patterns in the language used in toxic comments, which can be useful for understanding the nature of toxic language in online communication.
+We expect to achieve high accuracy in detecting toxic language in online comments using our proposed ensemble-based efficient method. Our model will be useful for content moderators and online community managers, who can use it to automatically flag toxic comments for removal. In addition, our model will provide insights into the patterns of language used in toxic comments, which can be useful for understanding and addressing toxic behavior in online communication.
 
 ## 5. Conclusion
 
