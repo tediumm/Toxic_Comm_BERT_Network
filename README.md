@@ -30,7 +30,18 @@ We expect to achieve high accuracy in detecting toxic language in online comment
 
 ## 5. Conclusion
 
-In this project, we propose to develop an NLP model to detect toxic language in online comments using a combination of the lexical coherence graph modeling technique and the stacking
+In this project, we propose to develop an NLP model to detect toxic language in online comments using a combination of the lexical coherence graph modeling technique and the stacking based efficient method. We will use the Jigsaw Unintended Bias in Toxicity Classification dataset to train and evaluate our model, and we expect to achieve high accuracy in detecting toxic language in online comments. Our model will be useful for content moderators and online community managers, who can use it to automatically flag toxic comments for removal. In addition, our model will provide insights into the patterns of language used in toxic comments, which can be useful for understanding and addressing toxic behavior in online communication.
+
+## 6. References
+
+- Jigsaw Unintended Bias in Toxicity Classification. [Online]. Available: https://www.kaggle.com/competitions/jigsaw-unintended-bias-in-toxicity-classification/data. [Accessed: Apr. 30, 2023].
+- Mesgar M., Strube M. Lexical coherence graph modeling using word embeddings //Proceedings of the 2016 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies. – 2016. – С. 1414-1423.
+- Oikawa Y., Nakayama Y., Murakami K. A Stacking-based Efficient Method for Toxic Language Detection on Live Streaming Chat //Proceedings of the 2022 Conference on Empirical Methods in Natural Language Processing: Industry Track. – 2022. – С. 571-578.
+- Rossi E. et al. Temporal graph networks for deep learning on dynamic graphs //arXiv preprint arXiv:2006.10637. – 2020.
+
+## 7. Appendices
+
+This section is intentionally left blank.
 
 ## Data
 https://www.kaggle.com/competitions/jigsaw-unintended-bias-in-toxicity-classification/data
