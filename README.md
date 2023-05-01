@@ -6,4 +6,4 @@ Build a model detecting distributors/spreaders in toxic words dataset
 ## Introduction
 ## Lit. Review | Anticipated results
 ## Data
-https://www.kaggle.com/datasets/ashwiniyer176/toxic-tweets-dataset
+https://www.kaggle.com/competitions/jigsaw-unintended-bias-in-toxicity-classification/data
