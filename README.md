@@ -50,14 +50,12 @@ In this project, we propose to develop an NLP model to detect toxic language in 
 
 ## 6. References
 
-- Jigsaw Unintended Bias in Toxicity Classification. [Online]. Available: https://www.kaggle.com/competitions/jigsaw-unintended-bias-in-toxicity-classification/data. [Accessed: Apr. 30, 2023].
-- Mesgar M., Strube M. Lexical coherence graph modeling using word embeddings //Proceedings of the 2016 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies. – 2016. – С. 1414-1423.
-- Oikawa Y., Nakayama Y., Murakami K. A Stacking-based Efficient Method for Toxic Language Detection on Live Streaming Chat //Proceedings of the 2022 Conference on Empirical Methods in Natural Language Processing: Industry Track. – 2022. – С. 571-578.
-- Rossi E. et al. Temporal graph networks for deep learning on dynamic graphs //arXiv preprint arXiv:2006.10637. – 2020.
+- Jigsaw Unintended Bias in Toxicity Classification. (n.d.). Retrieved April 30, 2023, from https://www.kaggle.com/competitions/jigsaw-unintended-bias-in-toxicity-classification/data
 
-## 7. Appendices
+- Mesgar, M., & Strube, M. (2016). Lexical coherence graph modeling using word embeddings. In Proceedings of the 2016 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies (pp. 1414-1423).
 
-This section is intentionally left blank.
+- Oikawa, Y., Nakayama, Y., & Murakami, K. (2022). A stacking-based efficient method for toxic language detection on live streaming chat. In Proceedings of the 2022 Conference on Empirical Methods in Natural Language Processing: Industry Track (pp. 571-578).
 
-## Data
-https://www.kaggle.com/competitions/jigsaw-unintended-bias-in-toxicity-classification/data
+- Park, S., & Fung, P. (2017). A hierarchical LSTM model for joint sentiment analysis and emotion classification. In Proceedings of the 15th Conference of the European Chapter of the Association for Computational Linguistics: Volume 2, Short Papers (pp. 746-751).
+
+- Rossi, E., Zou, J., Chiu, W., Zhang, Y., Liu, H., & Wang, L. (2020). Temporal graph networks for deep learning on dynamic graphs. arXiv preprint arXiv:2006.10637.
