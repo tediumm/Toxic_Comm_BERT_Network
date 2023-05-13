@@ -1,0 +1,31 @@
+# Importing packages and dataframe
+import pandas as pd
+import numpy as np
+import nltk
+from nltk.corpus import stopwords
+from nltk.tokenize import word_tokenize
+from nltk.stem import WordNetLemmatizer
+from nltk.stem.snowball import SnowballStemmer
+import networkx as nx
+import re
+
+df = pd.read_csv('train.csv')
+
+
+# Clean the text
+df['comment_text_clean'] = df['comment_text'].apply(lambda x: re.sub(r'[^a-zA-Z\s]', '', x.lower()))
+
+# Remove stop words
+stop_words = set(stopwords.words('english'))
+df['comment_text_nostop'] = df['comment_text_clean'].apply(lambda x: ' '.join(word for word in x.split() if word.lower() not in stop_words))
+
+# Initialize the stemmer
+ss = SnowballStemmer("english")
+# Stem the words
+df['comment_text_stem'] = df['comment_text_nostop'].apply(lambda x: ' '.join(ss.stem(word) for word in x.split()))
+
+# Initialize the lemmatizer
+wnl = WordNetLemmatizer()
+# Lemmatize the words
+df['comment_text_lemm'] = df['comment_text_stem'].apply(lambda x: ' '.join(wnl.lemmatize(word) for word in word_tokenize(x)))
+
