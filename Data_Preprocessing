@@ -29,3 +29,5 @@ wnl = WordNetLemmatizer()
 # Lemmatize the words
 df['comment_text_lemm'] = df['comment_text_stem'].apply(lambda x: ' '.join(wnl.lemmatize(word) for word in word_tokenize(x)))
 
+# Save preprocessed data
+df.to_excel('preprocessed_train.xlsx', index=False)
