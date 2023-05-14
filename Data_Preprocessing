@@ -31,3 +31,9 @@ df['comment_text_lemm'] = df['comment_text_stem'].apply(lambda x: ' '.join(wnl.l
 
 # Save preprocessed data
 df.to_excel('preprocessed_train.xlsx', index=False)
+
+# The next step is to extract some sort of vector from the received data.
+# This will use gensim word2vec and then calculate the relationship between the vectors based on the Euclidean distance.
+
+# In this way a matrix will be obtained, on the basis of which SNA methods can be used, since not only the presence of a connection between words,
+# but also its strength will be established
