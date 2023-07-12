@@ -6,7 +6,7 @@ Predicting Toxicity in Online Comments using NLP
 
 ## 2. Abstract
 
-Online communication has revolutionized how people interact with one another, but it has also created new challenges in managing toxic language in online comments. In this project, we propose to develop a natural language processing (NLP) model to detect toxic language in online comments. We will use a dataset from the Jigsaw Unintended Bias in Toxicity Classification competition to train and evaluate our model. Our approach will include a lexical coherence graph modeling technique using word embeddings, as well as a stacking-based efficient method for toxic language detection. We expect to achieve high accuracy in detecting toxic language in online comments, which will be useful for content moderators and online community managers.
+Online communication has revolutionized how people interact with one another, but it has also created new challenges in managing toxic language in online comments. In this project, developmetn of a natural language processing (NLP) model is proposed. Main task will be to detect toxic language in online comments. A dataset from the Jigsaw Unintended Bias in Toxicity Classification competition will be used to train and evaluate future model. Chosen approach will include a lexical coherence graph modeling technique using word embeddings, as well as a stacking-based efficient method for toxic language detection. High accuracy in detecting toxic language in online comments is expected to be achieved, which will be useful for content moderators and online community managers.
 
 ## 3. Introduction
 
@@ -42,11 +42,11 @@ Based on the literature review, we anticipate using a combination of deep learni
 
 ### Expected Results
 
-We expect to achieve high accuracy in detecting toxic language in online comments using our proposed ensemble-based efficient method. Our model will be useful for content moderators and online community managers, who can use it to automatically flag toxic comments for removal. In addition, our model will provide insights into the patterns of language used in toxic comments, which can be useful for understanding and addressing toxic behavior in online communication.
+High accuracy in detecting toxic language in online comments is expected while using proposed ensemble-based efficient method. Model will be useful for content moderators and online community managers, who can use it to automatically flag toxic comments for removal. In addition, model will provide insights into the patterns of language used in toxic comments, which can be useful for understanding and addressing toxic behavior in online communication.
 
 ## 5. Conclusion
 
-In this project, we propose to develop an NLP model to detect toxic language in online comments using a combination of the lexical coherence graph modeling technique and the stacking based efficient method. We will use the Jigsaw Unintended Bias in Toxicity Classification dataset to train and evaluate our model, and we expect to achieve high accuracy in detecting toxic language in online comments. Our model will be useful for content moderators and online community managers, who can use it to automatically flag toxic comments for removal. In addition, our model will provide insights into the patterns of language used in toxic comments, which can be useful for understanding and addressing toxic behavior in online communication.
+In this project, development of an NLP model is proposed to detect toxic language in online comments using a combination of the lexical coherence graph modeling technique and the stacking based efficient method. The Jigsaw Unintended Bias in Toxicity Classification dataset will be used to train and evaluate our model, and it is expected to achieve high accuracy in detecting toxic language in online comments. The model will be useful for content moderators and online community managers, who can use it to automatically flag toxic comments for removal. In addition, model will provide insights into the patterns of language used in toxic comments, which can be useful for understanding and addressing toxic behavior in online communication.
 
 ## 6. References
 
@@ -68,16 +68,18 @@ In this project, we propose to develop an NLP model to detect toxic language in 
 - Vocabulary Size: 181025
 - Max Sequence Length: 1250
 
+For reasons of inefficiency detection of CNN model, it was decided that BERT model would provide better results in more efficient way. Despite the fact that the CNN model is also capable of processing sequences of signs and words, its main task is rather to work with images using convolutional network methods. At the same time, BERT (Bidirectional Encoder Representations from Transformers) is a state-of-the-art transformer-based model for natural language processing (NLP) tasks. It was introduced by Google AI in 2018 and has achieved remarkable performance on a wide range of NLP tasks, including text classification, sentiment analysis, named entity recognition, and question answering. That is why final decision was made in favor of using this model.
+
 ## Preprocessing
 
-Data manipulation libraries used: pandas, machine learning libraries PyTorch, transformers library for BERT model and tokenizer, and various other libraries for data preprocessing, evaluation metrics, and visualization.
+Data manipulation libraries used: pandas, machine learning libraries PyTorch, transformers library for BERT model and tokenizer, and various other libraries for data preprocessing, evaluation metrics, and visualization (which can be found in code file "Data_Preprocessing.ipynb").
 The comments are preprocessed by converting them to lowercase and tokenizing them using a BERT tokenizer. The labels are converted to tensors.
 
 ![image](https://github.com/tediumm/Toxic_Comm_Ntwrk/assets/99214871/b36c0773-c08a-41cb-af76-ff6a494395a8)
 
 ## Clustering for further comment dataset observation
 
-Main Topics (NMF Model) were found for the whole dataset (figure 1) and for rows with toxic comments only (figure 2).
+Main Topics (NMF Model) were found for the whole dataset (figure 1) and for rows with toxic comments only (figure 2). Code can be found in "NMF_Topic_Modelling.ipynb"
 
 ![image](https://github.com/tediumm/Toxic_Comm_Ntwrk/assets/99214871/f7688fc5-dd34-497c-ba4c-54f56e308cdd)
 *Fig. 1 Topic modelling for all comments*
