@@ -59,3 +59,56 @@ In this project, we propose to develop an NLP model to detect toxic language in 
 - Park, S., & Fung, P. (2017). A hierarchical LSTM model for joint sentiment analysis and emotion classification. In Proceedings of the 15th Conference of the European Chapter of the Association for Computational Linguistics: Volume 2, Short Papers (pp. 746-751).
 
 - Rossi, E., Zou, J., Chiu, W., Zhang, Y., Liu, H., & Wang, L. (2020). Temporal graph networks for deep learning on dynamic graphs. arXiv preprint arXiv:2006.10637.
+
+
+# Resulting model descriprtion
+
+*Dataset info:* 
+- 159571 rows in total
+- Vocabulary Size: 181025
+- Max Sequence Length: 1250
+
+## Preprocessing
+
+Data manipulation libraries used: pandas, machine learning libraries PyTorch, transformers library for BERT model and tokenizer, and various other libraries for data preprocessing, evaluation metrics, and visualization.
+The comments are preprocessed by converting them to lowercase and tokenizing them using a BERT tokenizer. The labels are converted to tensors.
+
+![image](https://github.com/tediumm/Toxic_Comm_Ntwrk/assets/99214871/b36c0773-c08a-41cb-af76-ff6a494395a8)
+
+## Clustering for further comment dataset observation
+
+Main Topics (NMF Model) were found for the whole dataset (figure 1) and for rows with toxic comments only (figure 2).
+
+![image](https://github.com/tediumm/Toxic_Comm_Ntwrk/assets/99214871/f7688fc5-dd34-497c-ba4c-54f56e308cdd)
+*Fig. 1 Topic modelling for all comments*
+
+![image](https://github.com/tediumm/Toxic_Comm_Ntwrk/assets/99214871/12db4752-68f0-4ca4-9e18-80856a85f0ee)
+*Fig. 2 Topic modelling for toxic comments only*
+
+## Building the BERT model
+
+Used a custom BERT-based model for sequence classification.
+It utilizes the BertForSequenceClassification model from the transformers library, which is a pre-trained BERT model fine-tuned for classification tasks. The model takes input sequences, performs attention-based encoding, and outputs logits for each class.
+
+### BERT model details
+
+The code includes the necessary steps to obtain word embeddings from the BERT model for the toxic words. It uses the BERT tokenizer to tokenize the words and passes them through the BERT model to obtain the embeddings. The embeddings are then used to calculate similarity scores between the words, which are later used in the network visualization.
+
+## Training and evaluating the model:
+
+The model is trained using the training dataset. The code sets up the optimizer (AdamW) and the loss function (BCEWithLogitsLoss). The training loop iterates over the batches of the training dataset, performs forward and backward propagation, and updates the model parameters. The model is evaluated on the test dataset after each epoch.
+
+![image](https://github.com/tediumm/Toxic_Comm_Ntwrk/assets/99214871/a6b4e127-6336-4616-9dfb-7bd6db717558)
+*Fig. 3 Model evaluation*
+
+## Network visualization
+
+The toxic words identified in the previous step are visualized as a network graph. The graph represents the connections between words based on their similarity scores computed using BERT word embeddings. 
+Final version of network graph is created using the NetworkX and Bokeh libraries, and it provides an interactive visualization to explore the relationships between toxic words.
+
+
+![image](https://github.com/tediumm/Toxic_Comm_Ntwrk/assets/99214871/67673845-5e51-45e3-aa1b-07a74586754d)
+*Fig. 4 First non-interactive graph plot*
+
+![image](https://github.com/tediumm/Toxic_Comm_Ntwrk/assets/99214871/4591a537-eafc-49f2-b971-b0d66ba82000)
+*Fig. 5 Final version of interactive graph plot*
